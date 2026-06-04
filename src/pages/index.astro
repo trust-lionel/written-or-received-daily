@@ -334,6 +334,9 @@ document.getElementById('submit-btn')?.addEventListener('click', async () => {
   statusText.textContent = 'Generating your link...';
   linkEl.classList.add('hidden');
 
+  // Fetch a live Unsplash photo for the selected collection
+  const imgUrl = await fetchUnsplashPhoto(collection);
+
   try {
     const res = await fetch('/api/share', {
       method: 'POST',
@@ -344,7 +347,7 @@ document.getElementById('submit-btn')?.addEventListener('click', async () => {
         occasion: occasion || null,
         collection,
         playing: playing || null,
-        img: null,
+        img: imgUrl || null,
         isPublic,
       }),
     });
