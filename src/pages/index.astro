@@ -2,12 +2,16 @@
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 import SocialLinks from '../components/SocialLinks.astro';
+import { PUBLIC_CARDS } from '../data/cards';
 ---
 
 <Layout
   title="Written Or Received Daily"
   description="W.O.R.D. — Written Or Received Daily. Draw a motivational postcard or send one to someone who needs a good word today."
 >
+  <!-- Card data passed from server to client -->
+  <script id="card-data" type="application/json" set:html={JSON.stringify(PUBLIC_CARDS)}></script>
+
   <!-- Brand -->
   <header class="mb-10">
     <p class="text-sm font-medium tracking-widest" style="color:#1A1A1A;" data-dark-color="#F5F0E8">W.O.R.D.</p>
@@ -179,50 +183,19 @@ import SocialLinks from '../components/SocialLinks.astro';
 </Layout>
 
 <script>
-const cards = [
-  {
-    message: "You have survived every hard day so far. That is not a small thing. That is everything.",
-    from: "Houston, TX",
-    occasion: "Showing up anyway",
-    playing: "John Coltrane — A Love Supreme",
-    img: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80",
-  },
-  {
-    message: "The version of you that started is not the version of you that will finish. Trust the process.",
-    from: "3AM",
-    occasion: "Starting something new",
-    playing: "Miles Davis — Kind of Blue",
-    img: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80",
-  },
-  {
-    message: "Rest is not the opposite of progress. Sometimes it is the most productive thing you can do.",
-    from: "Somewhere between jobs",
-    occasion: "Getting through the week",
-    playing: "Bill Evans — Waltz for Debby",
-    img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80",
-  },
-  {
-    message: "Not everyone will understand the direction you are heading. Go anyway.",
-    from: "A Tuesday in November",
-    occasion: "Tough times",
-    playing: "Herbie Hancock — Maiden Voyage",
-    img: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80",
-  },
-  {
-    message: "You are not behind. You are on your own timeline. There is a difference.",
-    from: "Anonymous",
-    occasion: "Just because",
-    playing: null,
-    img: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80",
-  },
-  {
-    message: "Another trip around the sun. Everything you have been through made you exactly who you are today. That is worth celebrating.",
-    from: "The universe",
-    occasion: "Birthday",
-    playing: "Stevie Wonder — Happy Birthday",
-    img: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80",
-  },
-];
+// Load all 112 postcards from the embedded server-side JSON
+const cardData = document.getElementById('card-data');
+const cards = cardData ? JSON.parse(cardData.textContent || '[]') : [];
+
+// Shuffle so every visitor gets a different starting card
+function shuffle(arr: any[]) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+shuffle(cards);
 
 let current = 0;
 
@@ -233,7 +206,7 @@ function loadCard(i: number) {
   const playing = document.getElementById('card-playing') as HTMLElement;
 
   (document.getElementById('card-message') as HTMLElement).textContent = c.message;
-  (document.getElementById('card-from') as HTMLElement).textContent = 'From — ' + c.from;
+  (document.getElementById('card-from') as HTMLElement).textContent = c.from ? 'From — ' + c.from : 'From — Anonymous';
   (document.getElementById('card-occasion') as HTMLElement).textContent = c.occasion;
 
   if (c.playing) {
