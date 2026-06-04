@@ -45,7 +45,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Stevie Wonder — Happy Birthday',
-    img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80',
   },
   {
     id: 'bday-002',
@@ -54,7 +54,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'John Coltrane — Naima',
-    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=800&q=80',
   },
   {
     id: 'bday-003',
@@ -63,7 +63,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Miles Davis — Blue in Green',
-    img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1455156218388-5e61287818cc?w=800&q=80',
   },
   {
     id: 'bday-004',
@@ -72,7 +72,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Bill Evans — Peace Piece',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1476611338391-6f395a0dd82e?w=800&q=80',
   },
   {
     id: 'bday-005',
@@ -81,7 +81,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Herbie Hancock — Maiden Voyage',
-    img: 'https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1490197415175-074fd86b1fcc?w=800&q=80',
   },
   {
     id: 'bday-006',
@@ -90,7 +90,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Thelonious Monk — Round Midnight',
-    img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80',
   },
   {
     id: 'bday-007',
@@ -99,7 +99,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=80',
   },
   {
     id: 'bday-008',
@@ -108,7 +108,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Stevie Wonder — As',
-    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=800&q=80',
   },
   {
     id: 'bday-009',
@@ -117,7 +117,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Nina Simone — Feeling Good',
-    img: 'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=800&q=80',
   },
   {
     id: 'bday-010',
@@ -126,7 +126,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'John Coltrane — A Love Supreme',
-    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1540206395-68808572332f?w=800&q=80',
   },
   {
     id: 'bday-011',
@@ -135,7 +135,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Donny Hathaway — A Song for You',
-    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?w=800&q=80',
   },
   {
     id: 'bday-012',
@@ -144,7 +144,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?w=800&q=80',
   },
   {
     id: 'bday-013',
@@ -153,7 +153,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Bill Evans — Waltz for Debby',
-    img: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=800&q=80',
   },
   {
     id: 'bday-014',
@@ -162,7 +162,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Herbie Hancock — Dolphin Dance',
-    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?w=800&q=80',
   },
 
   // ─── STARTING SOMETHING NEW (14) ─────────────────────────────────────────────
@@ -174,7 +174,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1495954484750-af469f2f9be5?w=800&q=80',
   },
   {
     id: 'new-002',
@@ -183,7 +183,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'John Coltrane — Giant Steps',
-    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1511384838826-a3e23e9ef500?w=800&q=80',
   },
   {
     id: 'new-003',
@@ -192,7 +192,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Herbie Hancock — Watermelon Man',
-    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
   },
   {
     id: 'new-004',
@@ -201,7 +201,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Bill Evans — Peace Piece',
-    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&q=80',
   },
   {
     id: 'new-005',
@@ -210,7 +210,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Miles Davis — Freddie Freeloader',
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800&q=80',
   },
   {
     id: 'new-006',
@@ -219,7 +219,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Thelonious Monk — Well You Needn\'t',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80',
   },
   {
     id: 'new-007',
@@ -228,7 +228,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Coltrane — A Love Supreme, Part I',
-    img: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1505322022379-7c3353ee6291?w=800&q=80',
   },
   {
     id: 'new-008',
@@ -237,7 +237,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Herbie Hancock — Maiden Voyage',
-    img: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1508615039623-a25605d2b022?w=800&q=80',
   },
   {
     id: 'new-009',
@@ -246,7 +246,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Miles Davis — So What',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1521336575822-6da63fb45455?w=800&q=80',
   },
   {
     id: 'new-010',
@@ -255,7 +255,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'John Coltrane — Resolution',
-    img: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=800&q=80',
   },
   {
     id: 'new-011',
@@ -264,7 +264,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Wynton Marsalis — The Majesty of the Blues',
-    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1518655048521-f130df041f66?w=800&q=80',
   },
   {
     id: 'new-012',
@@ -273,7 +273,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Bill Evans — Autumn Leaves',
-    img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1484589065579-248aad0d8b13?w=800&q=80',
   },
   {
     id: 'new-013',
@@ -282,7 +282,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1531685250784-7569952593d2?w=800&q=80',
   },
   {
     id: 'new-014',
@@ -291,7 +291,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Miles Davis — Blue in Green',
-    img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?w=800&q=80',
   },
 
   // ─── FINISHING SOMETHING HARD (14) ───────────────────────────────────────────
@@ -303,7 +303,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'John Coltrane — Resolution',
-    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1506792006437-256b665541e2?w=800&q=80',
   },
   {
     id: 'finish-002',
@@ -312,7 +312,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1567360425618-1594206637d2?w=800&q=80',
   },
   {
     id: 'finish-003',
@@ -321,7 +321,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Herbie Hancock — Dolphin Dance',
-    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1520034475321-cbe63696469a?w=800&q=80',
   },
   {
     id: 'finish-004',
@@ -330,7 +330,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Bill Evans — Peace Piece',
-    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&q=80',
   },
   {
     id: 'finish-005',
@@ -339,7 +339,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'John Coltrane — A Love Supreme',
-    img: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
   },
   {
     id: 'finish-006',
@@ -348,7 +348,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
   },
   {
     id: 'finish-007',
@@ -357,7 +357,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Miles Davis — Flamenco Sketches',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
   },
   {
     id: 'finish-008',
@@ -366,7 +366,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Thelonious Monk — Round Midnight',
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
   },
   {
     id: 'finish-009',
@@ -375,7 +375,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Herbie Hancock — Watermelon Man',
-    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80',
   },
   {
     id: 'finish-010',
@@ -402,7 +402,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'John Coltrane — Naima',
-    img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
   },
   {
     id: 'finish-013',
@@ -411,7 +411,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Coltrane — A Love Supreme, Part III',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80',
   },
   {
     id: 'finish-014',
@@ -420,7 +420,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Wynton Marsalis — The Majesty of the Blues',
-    img: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1467810563316-b5476525c0f9?w=800&q=80',
   },
 
   // ─── SHOWING UP ANYWAY (14) ──────────────────────────────────────────────────
@@ -432,7 +432,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'John Coltrane — A Love Supreme',
-    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=800&q=80',
   },
   {
     id: 'show-002',
@@ -441,7 +441,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: null,
-    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=800&q=80',
   },
   {
     id: 'show-003',
@@ -450,7 +450,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Bill Evans — Peace Piece',
-    img: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80',
   },
   {
     id: 'show-004',
@@ -459,7 +459,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Thelonious Monk — Round Midnight',
-    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&q=80',
   },
   {
     id: 'show-005',
@@ -468,7 +468,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=800&q=80',
   },
   {
     id: 'show-006',
@@ -477,7 +477,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Herbie Hancock — Maiden Voyage',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=800&q=80',
   },
   {
     id: 'show-007',
@@ -486,7 +486,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'John Coltrane — Naima',
-    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80',
   },
   {
     id: 'show-008',
@@ -495,7 +495,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Bill Evans — Autumn Leaves',
-    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
   },
   {
     id: 'show-009',
@@ -504,7 +504,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1458560871784-56d23406c091?w=800&q=80',
   },
   {
     id: 'show-010',
@@ -513,7 +513,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Donny Hathaway — A Song for You',
-    img: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&q=80',
   },
   {
     id: 'show-011',
@@ -522,7 +522,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Miles Davis — Blue in Green',
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80',
   },
   {
     id: 'show-012',
@@ -531,7 +531,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'John Coltrane — Giant Steps',
-    img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1468164016595-6108e4c60c8b?w=800&q=80',
   },
   {
     id: 'show-013',
@@ -540,7 +540,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Herbie Hancock — Watermelon Man',
-    img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&q=80',
   },
   {
     id: 'show-014',
@@ -549,7 +549,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: null,
-    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1460036521480-ff49c08c2781?w=800&q=80',
   },
 
   // ─── GETTING THROUGH THE WEEK (14) ───────────────────────────────────────────
@@ -561,7 +561,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Bill Evans — Waltz for Debby',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=800&q=80',
   },
   {
     id: 'week-002',
@@ -570,7 +570,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Miles Davis — Sketches of Spain',
-    img: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=800&q=80',
   },
   {
     id: 'week-003',
@@ -579,7 +579,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'John Coltrane — Naima',
-    img: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?w=800&q=80',
   },
   {
     id: 'week-004',
@@ -588,7 +588,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1415886048892-9c17afb96a62?w=800&q=80',
   },
   {
     id: 'week-005',
@@ -597,7 +597,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Herbie Hancock — Maiden Voyage',
-    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1524230659092-07f99a75c013?w=800&q=80',
   },
   {
     id: 'week-006',
@@ -606,7 +606,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1485579149621-3123dd979885?w=800&q=80',
   },
   {
     id: 'week-007',
@@ -615,7 +615,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Bill Evans — Peace Piece',
-    img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1528143358888-6d3c7f67bd5d?w=800&q=80',
   },
   {
     id: 'week-008',
@@ -624,7 +624,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Thelonious Monk — Well You Needn\'t',
-    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=800&q=80',
   },
   {
     id: 'week-009',
@@ -633,7 +633,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'John Coltrane — Ballads',
-    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?w=800&q=80',
   },
   {
     id: 'week-010',
@@ -642,7 +642,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Donny Hathaway — A Song for You',
-    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?w=800&q=80',
   },
   {
     id: 'week-011',
@@ -651,7 +651,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Miles Davis — Blue in Green',
-    img: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=800&q=80',
   },
   {
     id: 'week-012',
@@ -660,7 +660,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Herbie Hancock — Dolphin Dance',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?w=800&q=80',
   },
   {
     id: 'week-013',
@@ -669,7 +669,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Nina Simone — Feeling Good',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800&q=80',
   },
   {
     id: 'week-014',
@@ -678,7 +678,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: null,
-    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&q=80',
   },
 
   // ─── TOUGH TIMES (14) ────────────────────────────────────────────────────────
@@ -690,7 +690,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Herbie Hancock — Maiden Voyage',
-    img: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1490908158103-fa7c6dc7e6e0?w=800&q=80',
   },
   {
     id: 'tough-002',
@@ -699,7 +699,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1502759683299-cdcd6974244f?w=800&q=80',
   },
   {
     id: 'tough-003',
@@ -708,7 +708,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'John Coltrane — Naima',
-    img: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&q=80',
   },
   {
     id: 'tough-004',
@@ -717,7 +717,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Bill Evans — Peace Piece',
-    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1431440869543-efaf3388c585?w=800&q=80',
   },
   {
     id: 'tough-005',
@@ -726,7 +726,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=800&q=80',
   },
   {
     id: 'tough-006',
@@ -735,7 +735,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Thelonious Monk — Round Midnight',
-    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1444723121867-7a241cacace9?w=800&q=80',
   },
   {
     id: 'tough-007',
@@ -744,7 +744,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Miles Davis — Blue in Green',
-    img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
   },
   {
     id: 'tough-008',
@@ -753,7 +753,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Donny Hathaway — A Song for You',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1494522855154-9297ac14b55f?w=800&q=80',
   },
   {
     id: 'tough-009',
@@ -762,7 +762,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'John Coltrane — A Love Supreme',
-    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&q=80',
   },
   {
     id: 'tough-010',
@@ -771,7 +771,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Bill Evans — Waltz for Debby',
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&q=80',
   },
   {
     id: 'tough-011',
@@ -780,7 +780,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Herbie Hancock — Watermelon Man',
-    img: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=800&q=80',
   },
   {
     id: 'tough-012',
@@ -789,7 +789,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Miles Davis — Flamenco Sketches',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1534430480872-3498386e7856?w=800&q=80',
   },
   {
     id: 'tough-013',
@@ -798,7 +798,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Nina Simone — Feeling Good',
-    img: 'https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1505761671935-60b3a7427bad?w=800&q=80',
   },
   {
     id: 'tough-014',
@@ -807,7 +807,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'John Coltrane — Resolution',
-    img: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?w=800&q=80',
   },
 
   // ─── JUST BECAUSE (14) ───────────────────────────────────────────────────────
@@ -819,7 +819,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: null,
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=800&q=80',
   },
   {
     id: 'just-002',
@@ -828,7 +828,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'John Coltrane — A Love Supreme',
-    img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80',
   },
   {
     id: 'just-003',
@@ -837,7 +837,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Miles Davis — So What',
-    img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1475070929565-c985b496cb9f?w=800&q=80',
   },
   {
     id: 'just-004',
@@ -846,7 +846,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Herbie Hancock — Maiden Voyage',
-    img: 'https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?w=800&q=80',
   },
   {
     id: 'just-005',
@@ -855,7 +855,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Bill Evans — Waltz for Debby',
-    img: 'https://images.unsplash.com/photo-1458560871784-56d23406c091?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&q=80',
   },
   {
     id: 'just-006',
@@ -864,7 +864,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Thelonious Monk — Round Midnight',
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?w=800&q=80',
   },
   {
     id: 'just-007',
@@ -873,7 +873,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Nina Simone — Feeling Good',
-    img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1504712598893-24159a91f50b?w=800&q=80',
   },
   {
     id: 'just-008',
@@ -882,7 +882,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Donny Hathaway — A Song for You',
-    img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1521747116042-5a810fda9664?w=800&q=80',
   },
   {
     id: 'just-009',
@@ -891,7 +891,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1508193638397-1c4234db14d8?w=800&q=80',
   },
   {
     id: 'just-010',
@@ -900,7 +900,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Miles Davis — Blue in Green',
-    img: 'https://images.unsplash.com/photo-1458560871784-56d23406c091?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800&q=80',
   },
   {
     id: 'just-011',
@@ -909,7 +909,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Bill Evans — Peace Piece',
-    img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1464278533981-50106e6176b1?w=800&q=80',
   },
   {
     id: 'just-012',
@@ -918,7 +918,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'John Coltrane — Naima',
-    img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1520962880247-cfaf541c8724?w=800&q=80',
   },
   {
     id: 'just-013',
@@ -927,7 +927,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Herbie Hancock — Dolphin Dance',
-    img: 'https://images.unsplash.com/photo-1499364615650-ec38552f4f34?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1535016120720-40c646be5580?w=800&q=80',
   },
   {
     id: 'just-014',
@@ -936,7 +936,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1458560871784-56d23406c091?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=800&q=80',
   },
 
   // ─── BIRTHDAY — 2 additional ─────────────────────────────────────────────────
@@ -948,7 +948,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Fela Kuti — Lady',
-    img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1504700610630-ac6aba3536d3?w=800&q=80',
   },
   {
     id: 'bday-016',
@@ -957,7 +957,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Birthday',
     collection: 'Encouragement',
     playing: 'Miles Davis — Kind of Blue',
-    img: 'https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1485470733090-0aae1788d5af?w=800&q=80',
   },
 
   // ─── STARTING SOMETHING NEW — 2 additional ───────────────────────────────────
@@ -969,7 +969,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'John Coltrane — Giant Steps',
-    img: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&q=80',
   },
   {
     id: 'new-016',
@@ -978,7 +978,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Starting something new',
     collection: 'Motivational',
     playing: 'Herbie Hancock — Watermelon Man',
-    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1482192505345-5852ba66f516-6f395a0dd82e?w=800&q=80',
   },
 
   // ─── FINISHING SOMETHING HARD — 2 additional ─────────────────────────────────
@@ -990,7 +990,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Miles Davis — Freddie Freeloader',
-    img: 'https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1432889963226-0c48dce21bc2-074fd86b1fcc?w=800&q=80',
   },
   {
     id: 'finish-016',
@@ -999,7 +999,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Finishing something hard',
     collection: 'Motivational',
     playing: 'Bill Evans — Autumn Leaves',
-    img: 'https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1471921471624-4e5a39faccde?w=800&q=80',
   },
 
   // ─── SHOWING UP ANYWAY — 2 additional ────────────────────────────────────────
@@ -1011,7 +1011,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'Herbie Hancock — Dolphin Dance',
-    img: 'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31-9374bd1c798e?w=800&q=80',
   },
   {
     id: 'show-016',
@@ -1020,7 +1020,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
     playing: 'John Coltrane — Resolution',
-    img: 'https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1548625149-720a3d8ef5e0-5e61287818cc?w=800&q=80',
   },
 
   // ─── GETTING THROUGH THE WEEK — 2 additional ─────────────────────────────────
@@ -1032,7 +1032,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Chet Baker — Almost Blue',
-    img: 'https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1439853949212-36589f9f1ac0-ac6aba3538d3-d120267933ba-56623f02e42e?w=800&q=80',
   },
   {
     id: 'week-016',
@@ -1041,7 +1041,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Getting through the week',
     collection: 'Abstract & Light',
     playing: 'Miles Davis — Blue in Green',
-    img: 'https://images.unsplash.com/photo-1519834785169-98be25ec3f84?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80',
   },
 
   // ─── TOUGH TIMES — 2 additional ──────────────────────────────────────────────
@@ -1053,7 +1053,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Thelonious Monk — Round Midnight',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
   },
   {
     id: 'tough-016',
@@ -1062,7 +1062,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
     playing: 'Donny Hathaway — A Song for You',
-    img: 'https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80',
   },
 
   // ─── JUST BECAUSE — 2 additional ─────────────────────────────────────────────
@@ -1074,7 +1074,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Miles Davis — Sketches of Spain',
-    img: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80',
   },
   {
     id: 'just-016',
@@ -1083,7 +1083,7 @@ export const PUBLIC_CARDS: Card[] = [
     occasion: 'Just because',
     collection: 'Jazz & Music',
     playing: 'Louis Armstrong — What a Wonderful World',
-    img: 'https://images.unsplash.com/photo-1458560871784-56d23406c091?w=800&q=80',
+    img: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800&q=80',
   },
 
 ];
