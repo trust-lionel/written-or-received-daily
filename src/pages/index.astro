@@ -202,7 +202,7 @@ shuffle(cards);
 let current = 0;
 
 // Fetch a fresh Unsplash photo for the current collection
-async function fetchUnsplashPhoto(collection: string): Promise<string | null> {
+async function fetchUnsplashPhoto(collection: string): Promise<{ url: string; photographerName: string; photographerUrl: string; unsplashUrl: string } | null> {
   try {
     const res = await fetch(`/api/photo?collection=${encodeURIComponent(collection)}`);
     if (!res.ok) return null;
@@ -220,7 +220,7 @@ async function fetchUnsplashPhoto(collection: string): Promise<string | null> {
       };
       updateAttribution();
     }
-    return data.url ?? null;
+    return data.url ? { url: data.url, photographerName: data.photographerName, photographerUrl: data.photographerUrl, unsplashUrl: data.unsplashUrl } : null;
   } catch {
     return null;
   }
@@ -258,8 +258,8 @@ async function loadCard(i: number) {
   ph.classList.remove('hidden');
 
   // Fetch live Unsplash photo — fall back to static URL if API fails
-  const liveUrl = await fetchUnsplashPhoto(c.collection ?? 'Nature & Stillness');
-  const imgUrl = liveUrl ?? c.img;
+  const livePhoto = await fetchUnsplashPhoto(c.collection ?? 'Nature & Stillness');
+  const imgUrl = livePhoto?.url ?? c.img;
 
   img.src = imgUrl;
   img.onload = () => { ph.classList.add('hidden'); img.classList.remove('hidden'); };
@@ -335,7 +335,7 @@ document.getElementById('submit-btn')?.addEventListener('click', async () => {
   linkEl.classList.add('hidden');
 
   // Fetch a live Unsplash photo for the selected collection
-  const imgUrl = await fetchUnsplashPhoto(collection);
+  const livePhoto = await fetchUnsplashPhoto(collection);
 
   try {
     const res = await fetch('/api/share', {
@@ -347,7 +347,10 @@ document.getElementById('submit-btn')?.addEventListener('click', async () => {
         occasion: occasion || null,
         collection,
         playing: playing || null,
-        img: imgUrl || null,
+        img: livePhoto?.url || null,
+        photographerName: livePhoto?.photographerName || null,
+        photographerUrl: livePhoto?.photographerUrl || null,
+        unsplashUrl: livePhoto?.unsplashUrl || null,
         isPublic,
       }),
     });
@@ -403,7 +406,10 @@ document.getElementById('share-btn')?.addEventListener('click', async () => {
         occasion: card.occasion,
         collection: card.collection ?? 'Jazz & Music',
         playing: card.playing,
-        img: card.img,
+        img: currentPhotoAttribution ? (document.getElementById('postcard-img') as HTMLImageElement)?.src ?? card.img : card.img,
+        photographerName: currentPhotoAttribution?.name ?? null,
+        photographerUrl: currentPhotoAttribution?.photographerUrl ?? null,
+        unsplashUrl: currentPhotoAttribution?.unsplashUrl ?? null,
       }),
     });
 

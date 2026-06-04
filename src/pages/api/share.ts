@@ -10,7 +10,8 @@ import { nanoid } from 'nanoid';
 export const POST: APIRoute = async ({ request }) => {
   try {
     const body = await request.json();
-    const { message, from, occasion, collection, playing, img } = body;
+    const { message, from, occasion, collection, playing, img,
+            photographerName, photographerUrl, unsplashUrl } = body;
 
     // Validate required field
     if (!message || typeof message !== 'string' || message.trim().length === 0) {
