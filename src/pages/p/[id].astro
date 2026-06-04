@@ -40,9 +40,14 @@ const description = card
 ---
 
 <Layout title={title} description={description} image={ogImage} noindex={!card}>
-  <header class="mb-10">
-    <a href="/" class="text-sm font-medium tracking-widest" style="color:#1A1A1A; text-decoration:none;" data-dark-color="#F5F0E8">W.O.R.D.</a>
-    <p class="text-xs tracking-widest uppercase text-neutral-400 dark:text-neutral-500 mt-1">Written Or Received Daily</p>
+  <header class="mb-10 flex items-start justify-between">
+    <div>
+      <a href="/" class="text-sm font-medium tracking-widest" style="color:#1A1A1A; text-decoration:none;" data-dark-color="#F5F0E8">W.O.R.D.</a>
+      <p class="text-xs tracking-widest uppercase text-neutral-400 dark:text-neutral-500 mt-1">Written Or Received Daily</p>
+    </div>
+    <nav>
+      <a href="/about" class="text-xs text-neutral-400 dark:text-neutral-500 hover:text-black dark:hover:text-white transition-colors">About</a>
+    </nav>
   </header>
 
   {notFound ? (
@@ -126,6 +131,11 @@ const description = card
       >L I O N E L &nbsp; M O S L E Y</a>
     </p>
     <SocialLinks />
+    <div class="flex items-center gap-4">
+      <a href="/privacy" class="text-xs text-neutral-300 dark:text-neutral-600 hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors">Privacy Policy</a>
+      <span class="text-neutral-200 dark:text-neutral-700 text-xs">·</span>
+      <a href="/terms" class="text-xs text-neutral-300 dark:text-neutral-600 hover:text-neutral-500 dark:hover:text-neutral-400 transition-colors">Terms of Use</a>
+    </div>
   </footer>
 </Layout>
 
