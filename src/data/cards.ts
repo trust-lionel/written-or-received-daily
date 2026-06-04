@@ -1087,4 +1087,3 @@ export const PUBLIC_CARDS: Card[] = [
   },
 
 ];
-];
