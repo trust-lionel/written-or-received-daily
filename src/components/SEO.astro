@@ -24,7 +24,7 @@ const {
 } = Astro.props;
 
 const siteTitle = 'W.O.R.D. — Written Or Received Daily';
-const fullTitle = title ? `${title} — W.O.R.D.` : siteTitle;
+const fullTitle = title ? (title.includes('W.O.R.D.') ? title : `${title} — W.O.R.D.`) : siteTitle;
 ---
 
 <!-- Primary -->

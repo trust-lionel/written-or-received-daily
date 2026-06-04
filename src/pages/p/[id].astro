@@ -31,8 +31,8 @@ const ogImage = card?.img
   : 'https://wordcards.co/og-image.png';
 
 const title = card
-  ? `A postcard for you — W.O.R.D.`
-  : 'Postcard not found — W.O.R.D.';
+  ? 'A postcard for you'
+  : 'Postcard not found';
 
 const description = card
   ? card.message.slice(0, 155)
@@ -41,7 +41,7 @@ const description = card
 
 <Layout title={title} description={description} image={ogImage} noindex={!card}>
   <header class="mb-10">
-    <a href="/" class="text-sm font-medium tracking-widest text-black dark:text-white">W.O.R.D.</a>
+    <a href="/" class="text-sm font-medium tracking-widest" style="color:#1A1A1A; text-decoration:none;" data-dark-color="#F5F0E8">W.O.R.D.</a>
     <p class="text-xs tracking-widest uppercase text-neutral-400 dark:text-neutral-500 mt-1">Written Or Received Daily</p>
   </header>
 
@@ -93,6 +93,9 @@ const description = card
         >
           Copy link to this postcard
         </button>
+        <p id="copy-confirm" class="hidden text-xs text-center text-neutral-500 dark:text-neutral-400">
+          Link copied to clipboard.
+        </p>
         <a
           href="/"
           class="w-full py-2.5 text-sm text-center bg-black dark:bg-white text-white dark:text-black rounded-lg hover:opacity-80 transition-opacity"
@@ -101,9 +104,6 @@ const description = card
         </a>
       </div>
 
-      <p id="copy-confirm" class="hidden text-xs text-center text-neutral-500 dark:text-neutral-400 mb-6">
-        Link copied to clipboard.
-      </p>
     </main>
   )}
 
