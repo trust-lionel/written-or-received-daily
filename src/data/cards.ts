@@ -209,7 +209,7 @@ export const PUBLIC_CARDS: Card[] = [
     from: 'Anonymous',
     occasion: 'Starting something new',
     collection: 'Motivational',
-    playing: 'Thelonious Monk — Well You Needn't',
+    playing: 'Thelonious Monk — Well You Neednt',
     img: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=800&q=80',
   },
   {
@@ -449,7 +449,7 @@ export const PUBLIC_CARDS: Card[] = [
     from: 'Anonymous',
     occasion: 'Showing up anyway',
     collection: 'Nature & Stillness',
-    playing: 'Thelonious Monk — Well You Needn't',
+    playing: 'Thelonious Monk — Well You Neednt',
     img: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=800&q=80',
   },
   {
@@ -707,7 +707,7 @@ export const PUBLIC_CARDS: Card[] = [
     from: 'Anonymous',
     occasion: 'Tough times',
     collection: 'Nature & Stillness',
-    playing: 'Thelonious Monk — Well You Needn't',
+    playing: 'Thelonious Monk — Well You Neednt',
     img: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=800&q=80',
   },
   {
