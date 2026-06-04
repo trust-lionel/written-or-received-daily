@@ -230,9 +230,13 @@ let currentPhotoAttribution: { name: string; photographerUrl: string; unsplashUr
 
 function updateAttribution() {
   const attr = document.getElementById('photo-attribution') as HTMLElement;
-  if (attr && currentPhotoAttribution) {
-    attr.innerHTML = `Photo by <a href="${currentPhotoAttribution.photographerUrl}" target="_blank" rel="noopener noreferrer" class="underline">${currentPhotoAttribution.name}</a> on <a href="${currentPhotoAttribution.unsplashUrl}" target="_blank" rel="noopener noreferrer" class="underline">Unsplash</a>`;
+  if (!attr) return;
+  if (currentPhotoAttribution) {
+    attr.innerHTML = `Photo by <a href="${currentPhotoAttribution.photographerUrl}" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-neutral-300 dark:decoration-neutral-600">${currentPhotoAttribution.name}</a> on <a href="${currentPhotoAttribution.unsplashUrl}" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-neutral-300 dark:decoration-neutral-600">Unsplash</a>`;
     attr.classList.remove('hidden');
+  } else {
+    attr.innerHTML = '';
+    attr.classList.add('hidden');
   }
 }
 
@@ -241,6 +245,10 @@ async function loadCard(i: number) {
   const img = document.getElementById('postcard-img') as HTMLImageElement;
   const ph = document.getElementById('img-placeholder') as HTMLElement;
   const playing = document.getElementById('card-playing') as HTMLElement;
+
+  // Clear attribution while new photo loads
+  currentPhotoAttribution = null;
+  updateAttribution();
 
   (document.getElementById('card-message') as HTMLElement).textContent = c.message;
   (document.getElementById('card-from') as HTMLElement).textContent = c.from ? 'From — ' + c.from : 'From — Anonymous';
