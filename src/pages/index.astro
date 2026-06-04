@@ -307,11 +307,11 @@ document.getElementById('share-btn')?.addEventListener('click', async () => {
       linkEl.textContent = data.url;
       linkEl.classList.remove('hidden');
     } else {
-      // Show the server's specific error message if available
-      confirm.textContent = data.error || 'Something went wrong. Please try again.';
+      // Show detail for debugging, fall back to generic message
+      confirm.textContent = data.detail || data.error || 'Something went wrong. Please try again.';
     }
-  } catch {
-    confirm.textContent = 'Something went wrong. Please try again.';
+  } catch (e) {
+    confirm.textContent = e instanceof Error ? e.message : 'Something went wrong. Please try again.';
   }
 });
 </script>
