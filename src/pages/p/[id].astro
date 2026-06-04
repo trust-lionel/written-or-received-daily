@@ -3,6 +3,9 @@
 // Dynamic route — renders a single shared postcard.
 // Fetches postcard data from Netlify Blobs by ID.
 // OG image is generated dynamically so social shares show the postcard image.
+// prerender = false tells Astro this is server-rendered in hybrid mode —
+// no getStaticPaths() needed, IDs are generated at runtime via Netlify Blobs.
+export const prerender = false;
 
 import Layout from '../../layouts/Layout.astro';
 import SocialLinks from '../../components/SocialLinks.astro';
