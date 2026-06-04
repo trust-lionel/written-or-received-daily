@@ -163,7 +163,8 @@ import { PUBLIC_CARDS } from '../data/cards';
 
     <!-- Success message -->
     <div id="success-msg" class="hidden mt-4 px-4 py-3 bg-neutral-100 dark:bg-neutral-900 rounded-lg text-sm text-neutral-700 dark:text-neutral-300">
-      Your postcard is on its way. Copy your link to share it.
+      <p id="success-text">Generating your link...</p>
+      <a id="success-link" href="#" target="_blank" class="hidden block mt-2 text-xs underline underline-offset-4 text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors break-all"></a>
     </div>
   </section>
 
@@ -253,18 +254,68 @@ document.getElementById('collections')?.addEventListener('click', (e) => {
   }
 });
 
-document.getElementById('submit-btn')?.addEventListener('click', () => {
+document.getElementById('submit-btn')?.addEventListener('click', async () => {
   const msg = (document.getElementById('msg-input') as HTMLTextAreaElement).value.trim();
   if (!msg) { (document.getElementById('msg-input') as HTMLElement).focus(); return; }
+
+  const from = (document.getElementById('from-input') as HTMLInputElement).value.trim();
+  const playing = (document.getElementById('playing-input') as HTMLInputElement).value.trim();
+  const occasion = (document.getElementById('occasion-input') as HTMLSelectElement).value;
+  const activeCol = document.querySelector('.collection-pill.active, [style*="#B45309"]') as HTMLElement;
+  const collection = activeCol?.dataset?.col ?? 'Jazz & Music';
+  const isPublic = (document.getElementById('public-toggle') as HTMLInputElement).checked;
+
   const s = document.getElementById('success-msg') as HTMLElement;
+  const statusText = document.getElementById('success-text') as HTMLElement;
+  const linkEl = document.getElementById('success-link') as HTMLAnchorElement;
+
   s.classList.remove('hidden');
+  statusText.textContent = 'Generating your link...';
+  linkEl.classList.add('hidden');
+
+  try {
+    const res = await fetch('/api/share', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: msg,
+        from: from || null,
+        occasion: occasion || null,
+        collection,
+        playing: playing || null,
+        img: null,
+        isPublic,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (data.url) {
+      statusText.textContent = 'Your postcard is on its way.';
+      linkEl.href = data.url;
+      linkEl.textContent = data.url;
+      linkEl.classList.remove('hidden');
+
+      try {
+        await navigator.clipboard.writeText(data.url);
+        statusText.textContent = 'Your postcard is on its way. Link copied to clipboard.';
+      } catch {
+        // Clipboard blocked — link still visible to copy manually
+      }
+    } else {
+      statusText.textContent = data.detail || data.error || 'Something went wrong. Please try again.';
+    }
+  } catch {
+    statusText.textContent = 'Something went wrong. Please try again.';
+  }
+
+  // Clear form
   (document.getElementById('msg-input') as HTMLTextAreaElement).value = '';
   (document.getElementById('from-input') as HTMLInputElement).value = '';
   (document.getElementById('playing-input') as HTMLInputElement).value = '';
   (document.getElementById('occasion-input') as HTMLSelectElement).value = '';
   (document.getElementById('char-count') as HTMLElement).textContent = '0 / 280';
   (document.getElementById('public-toggle') as HTMLInputElement).checked = false;
-  setTimeout(() => s.classList.add('hidden'), 4000);
 });
 
 loadCard(0);
