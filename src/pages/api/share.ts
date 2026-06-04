@@ -60,7 +60,21 @@ export const POST: APIRoute = async ({ request }) => {
     );
   } catch (err) {
     console.error('Share API error:', err);
-    return new Response(JSON.stringify({ error: 'Something went wrong. Please try again.' }), {
+
+    // Detect Netlify Blobs context error — occurs when site is not yet
+    // connected to its custom domain or Blobs runtime is not initialized.
+    const errMsg = err instanceof Error ? err.message : String(err);
+    const isContextError =
+      errMsg.includes('context') ||
+      errMsg.includes('NETLIFY_BLOBS') ||
+      errMsg.includes('store') ||
+      errMsg.includes('environment');
+
+    const userMessage = isContextError
+      ? 'Sharing will be available once wordcards.co is fully connected. Check back shortly.'
+      : 'Something went wrong. Please try again.';
+
+    return new Response(JSON.stringify({ error: userMessage }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });

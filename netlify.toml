@@ -2,6 +2,13 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  NODE_VERSION = "18"
+
+# Enable Netlify Blobs for postcard storage
+[blobs]
+  enabled = true
+
 # Redirect www to apex domain — prevents duplicate content penalty
 [[redirects]]
   from = "https://www.wordcards.co/*"

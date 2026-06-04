@@ -14,7 +14,7 @@ import { PUBLIC_CARDS } from '../data/cards';
 
   <!-- Brand -->
   <header class="mb-10">
-    <p class="text-sm font-medium tracking-widest" style="color:#1A1A1A;" data-dark-color="#F5F0E8">W.O.R.D.</p>
+    <a href="/" class="text-sm font-medium tracking-widest" style="color:#1A1A1A; text-decoration:none;" data-dark-color="#F5F0E8">W.O.R.D.</a>
     <p class="text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-400 mt-1">Written Or Received Daily</p>
   </header>
 
@@ -307,7 +307,8 @@ document.getElementById('share-btn')?.addEventListener('click', async () => {
       linkEl.textContent = data.url;
       linkEl.classList.remove('hidden');
     } else {
-      confirm.textContent = 'Something went wrong. Please try again.';
+      // Show the server's specific error message if available
+      confirm.textContent = data.error || 'Something went wrong. Please try again.';
     }
   } catch {
     confirm.textContent = 'Something went wrong. Please try again.';
