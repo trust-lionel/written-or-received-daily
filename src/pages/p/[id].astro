@@ -55,15 +55,17 @@ const description = card
   ) : (
     <main>
       <!-- Postcard -->
-      <article class="border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden mb-6">
-        {card.img && (
-          <img
-            src={`${card.img}&w=800&q=80`}
-            alt="Postcard image"
-            class="w-full h-56 object-cover"
-            loading="eager"
-          />
-        )}
+      <article class="border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden mb-6" data-collection={card.collection ?? 'Nature & Stillness'} id="postcard-article">
+        <div id="img-placeholder" class="w-full h-56 bg-neutral-100 dark:bg-neutral-900 flex items-center justify-center text-neutral-400 dark:text-neutral-600 hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+        </div>
+        <img
+          id="postcard-img"
+          src={card.img ? `${card.img}&w=800&q=80` : ''}
+          alt="Postcard image"
+          class="w-full h-56 object-cover"
+          loading="eager"
+        />
         <div class="px-6 py-5">
           <div class="flex justify-between items-baseline mb-3">
             <span class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
@@ -82,11 +84,11 @@ const description = card
               {card.playing}
             </p>
           )}
-          {card.photographerName && card.unsplashUrl && (
-            <p class="text-xs text-neutral-300 dark:text-neutral-600 mt-2">
+          <p id="shared-attribution" class={`text-xs text-neutral-300 dark:text-neutral-600 mt-2 ${!card.photographerName ? 'hidden' : ''}`}>
+            {card.photographerName && <>
               Photo by <a href={card.photographerUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">{card.photographerName}</a> on <a href={card.unsplashUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">Unsplash</a>
-            </p>
-          )}
+            </>}
+          </p>
         </div>
       </article>
 
@@ -128,6 +130,45 @@ const description = card
 </Layout>
 
 <script>
+  // Handle image loading — fetch fresh Unsplash photo if stored URL fails or is missing
+  const img = document.getElementById('postcard-img') as HTMLImageElement;
+  const ph = document.getElementById('img-placeholder') as HTMLElement;
+  const collection = (document.getElementById('postcard-article') as HTMLElement)?.dataset?.collection ?? 'Nature & Stillness';
+
+  async function loadFreshPhoto() {
+    try {
+      const res = await fetch(`/api/photo?collection=${encodeURIComponent(collection)}`);
+      if (!res.ok) { ph?.classList.remove('hidden'); img?.classList.add('hidden'); return; }
+      const data = await res.json();
+      if (data.url && img) {
+        img.src = `${data.url}&w=800&q=80`;
+        // Update attribution if not already present
+        const attr = document.getElementById('shared-attribution') as HTMLElement;
+        if (attr && !attr.innerHTML.trim() && data.photographerName) {
+          attr.innerHTML = `Photo by <a href="${data.photographerUrl}" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">${data.photographerName}</a> on <a href="${data.unsplashUrl}" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">Unsplash</a>`;
+          attr.classList.remove('hidden');
+        }
+      }
+    } catch {
+      ph?.classList.remove('hidden');
+      img?.classList.add('hidden');
+    }
+  }
+
+  if (img) {
+    if (!img.src || img.src === window.location.href) {
+      // No stored image — fetch fresh
+      img.classList.add('hidden');
+      loadFreshPhoto();
+    } else {
+      img.onload = () => { ph?.classList.add('hidden'); };
+      img.onerror = () => {
+        img.classList.add('hidden');
+        loadFreshPhoto();
+      };
+    }
+  }
+
   document.getElementById('copy-btn')?.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(window.location.href);
