@@ -40,6 +40,7 @@ import { PUBLIC_CARDS } from '../data/cards';
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
           <span id="card-song"></span>
         </p>
+        <p id="photo-attribution" class="hidden text-xs text-neutral-300 dark:text-neutral-600 mt-2"></p>
       </div>
     </div>
 
@@ -200,7 +201,42 @@ shuffle(cards);
 
 let current = 0;
 
-function loadCard(i: number) {
+// Fetch a fresh Unsplash photo for the current collection
+async function fetchUnsplashPhoto(collection: string): Promise<string | null> {
+  try {
+    const res = await fetch(`/api/photo?collection=${encodeURIComponent(collection)}`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    // Trigger download as required by Unsplash API guidelines
+    if (data.downloadUrl) {
+      fetch(`/api/photo/download?url=${encodeURIComponent(data.downloadUrl)}`).catch(() => {});
+    }
+    // Store attribution for display
+    if (data.photographerName) {
+      currentPhotoAttribution = {
+        name: data.photographerName,
+        photographerUrl: data.photographerUrl,
+        unsplashUrl: data.unsplashUrl,
+      };
+      updateAttribution();
+    }
+    return data.url ?? null;
+  } catch {
+    return null;
+  }
+}
+
+let currentPhotoAttribution: { name: string; photographerUrl: string; unsplashUrl: string } | null = null;
+
+function updateAttribution() {
+  const attr = document.getElementById('photo-attribution') as HTMLElement;
+  if (attr && currentPhotoAttribution) {
+    attr.innerHTML = `Photo by <a href="${currentPhotoAttribution.photographerUrl}" target="_blank" rel="noopener noreferrer" class="underline">${currentPhotoAttribution.name}</a> on <a href="${currentPhotoAttribution.unsplashUrl}" target="_blank" rel="noopener noreferrer" class="underline">Unsplash</a>`;
+    attr.classList.remove('hidden');
+  }
+}
+
+async function loadCard(i: number) {
   const c = cards[i];
   const img = document.getElementById('postcard-img') as HTMLImageElement;
   const ph = document.getElementById('img-placeholder') as HTMLElement;
@@ -217,11 +253,25 @@ function loadCard(i: number) {
     playing.classList.add('hidden');
   }
 
+  // Show placeholder while fetching
   img.classList.add('hidden');
   ph.classList.remove('hidden');
-  img.src = c.img;
+
+  // Fetch live Unsplash photo — fall back to static URL if API fails
+  const liveUrl = await fetchUnsplashPhoto(c.collection ?? 'Nature & Stillness');
+  const imgUrl = liveUrl ?? c.img;
+
+  img.src = imgUrl;
   img.onload = () => { ph.classList.add('hidden'); img.classList.remove('hidden'); };
-  img.onerror = () => { ph.classList.remove('hidden'); img.classList.add('hidden'); };
+  img.onerror = () => {
+    // Try static fallback
+    if (imgUrl !== c.img) {
+      img.src = c.img;
+    } else {
+      ph.classList.remove('hidden');
+      img.classList.add('hidden');
+    }
+  };
 }
 
 document.getElementById('draw-btn')?.addEventListener('click', () => {
@@ -240,7 +290,7 @@ document.getElementById('msg-input')?.addEventListener('input', (e) => {
   if (len > 280) el.value = el.value.slice(0, 280);
 });
 
-document.getElementById('collections')?.addEventListener('click', (e) => {
+document.getElementById('collections')?.addEventListener('click', async (e) => {
   const target = e.target as HTMLElement;
   if (target.classList.contains('collection-pill')) {
     document.querySelectorAll<HTMLElement>('.collection-pill').forEach((p) => {
@@ -251,6 +301,17 @@ document.getElementById('collections')?.addEventListener('click', (e) => {
     target.style.backgroundColor = '#B45309';
     target.classList.add('text-white', 'border-transparent');
     target.classList.remove('border-neutral-300', 'dark:border-neutral-700', 'text-neutral-500', 'dark:text-neutral-400');
+
+    // Fetch preview image for selected collection
+    const col = target.dataset.col ?? 'Nature & Stillness';
+    const previewUrl = await fetchUnsplashPhoto(col);
+    if (previewUrl) {
+      const preview = document.getElementById('collection-preview') as HTMLImageElement;
+      if (preview) {
+        preview.src = previewUrl;
+        preview.classList.remove('hidden');
+      }
+    }
   }
 });
 
