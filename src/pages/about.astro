@@ -1,0 +1,95 @@
+---
+// src/pages/about.astro
+import Layout from '../layouts/Layout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+---
+
+<Layout
+  title="About"
+  description="W.O.R.D. — Written Or Received Daily. Learn about the project, the curator, and why a good word still matters."
+>
+  <header class="mb-10">
+    <a href="/" class="text-sm font-medium tracking-widest" style="color:#1A1A1A;" data-dark-color="#F5F0E8">W.O.R.D.</a>
+    <p class="text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-400 mt-1">Written Or Received Daily</p>
+  </header>
+
+  <main>
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h1>About W.O.R.D.</h1>
+
+      <p>
+        W.O.R.D. stands for <strong>Written Or Received Daily</strong>. It is a simple idea: a postcard
+        carrying a good word, sent to someone who needs it — or drawn at random by someone who does.
+      </p>
+
+      <p>
+        There is no algorithm here. No engagement metric. No feed to scroll. Just one message, one image,
+        and the belief that the right words at the right moment can change the direction of someone's day.
+      </p>
+
+      <h2>How it works</h2>
+
+      <p>
+        Every visitor can draw a postcard from the public pool — a collection of short, honest,
+        motivational messages paired with curated imagery from Unsplash. Each draw is random.
+        You get what you need, not what you searched for.
+      </p>
+
+      <p>
+        You can also write your own. Choose an image collection, write your message, fill in the optional
+        fields — who it is from, what occasion it marks, what you were listening to when you wrote it —
+        and send it. You will receive a unique link to share directly with the person you had in mind.
+        No account required. No friction.
+      </p>
+
+      <p>
+        If you choose to add your postcard to the public pool, it becomes available to be drawn by anyone
+        who visits. Your words reach someone you will never meet, at a moment you cannot predict.
+        That is the point.
+      </p>
+
+      <h2>The curator</h2>
+
+      <p>
+        W.O.R.D. was created by <a href="https://trust-lionel.com" target="_blank" rel="noopener noreferrer">Lionel Mosley</a> —
+        IT consultant, thought leader, and avid jazz curator based in Houston, TX. Outside of building
+        technology infrastructure for organizations nationwide, Lionel curates music and ideas that
+        encourage people to think differently, show up fully, and trust the process.
+      </p>
+
+      <p>
+        W.O.R.D. is a personal project — unrelated to IT consulting, unsponsored, and built entirely
+        for the love of it.
+      </p>
+
+      <blockquote>
+        "I've spent my career asking 'what if' when everyone else was asking 'how much.' The
+        organizations — and people — that survive what's coming will be the ones that asked the
+        right questions before the crisis began."
+        <cite>— Lionel Mosley</cite>
+      </blockquote>
+
+      <h2>The image collections</h2>
+
+      <p>
+        Every postcard is paired with an image drawn from one of six curated Unsplash collections:
+        Jazz &amp; Music, City &amp; Urban, Nature &amp; Stillness, Abstract &amp; Light, Motivational,
+        and Encouragement. The collections are hand-selected — not algorithmically generated — to ensure
+        every image earns its place alongside the message it accompanies.
+      </p>
+    </article>
+  </main>
+
+  <footer class="mt-16 pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-col items-center gap-3">
+    <p class="text-xs text-neutral-400 dark:text-neutral-500 text-center leading-relaxed">
+      Built with ❤️ in Houston, TX<br />
+      by <a
+        href="https://trust-lionel.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tracking-widest text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white underline underline-offset-4 decoration-neutral-300 dark:decoration-neutral-700 transition-colors"
+      >L I O N E L &nbsp; M O S L E Y</a>
+    </p>
+    <SocialLinks />
+  </footer>
+</Layout>

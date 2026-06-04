@@ -1,0 +1,70 @@
+---
+// SEO.astro
+// Drop into the <head> of every page layout.
+// Usage:
+//   import SEO from '../components/SEO.astro';
+//   <SEO title="Send a Postcard" description="..." />
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'W.O.R.D. — Written Or Received Daily. Send or receive a motivational postcard with imagery and a good word for someone who needs it.',
+  image = 'https://wordcards.co/og-image.png',
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  type = 'website',
+  noindex = false,
+} = Astro.props;
+
+const siteTitle = 'W.O.R.D. — Written Or Received Daily';
+const fullTitle = title ? `${title} — W.O.R.D.` : siteTitle;
+---
+
+<!-- Primary -->
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="author" content="Lionel Mosley" />
+<link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+{!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
+
+<!-- Theme -->
+<meta name="theme-color" content="#111010" />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="W.O.R.D." />
+<meta property="og:locale" content="en_US" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={image} />
+<meta name="twitter:creator" content="@lionelmosley" />
+
+<!-- Authorship / Entity SEO -->
+<!-- rel="me" links connect wordcards.co to Lionel's owned profiles -->
+<!-- strengthening Google's knowledge graph entity for trust-lionel -->
+<link rel="me" href="https://github.com/trust-lionel" />
+<link rel="me" href="https://www.linkedin.com/in/lionelmosley" />
+<link rel="me" href="https://www.reddit.com/user/trust-lionel/" />
+
+<!-- Sitemap -->
+<link rel="sitemap" href="/sitemap-index.xml" />
+
+<!-- RSS (if you add a feed later) -->
+<!-- <link rel="alternate" type="application/rss+xml" title="W.O.R.D." href="/rss.xml" /> -->

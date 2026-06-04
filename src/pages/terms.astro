@@ -1,0 +1,96 @@
+---
+// src/pages/terms.astro
+import Layout from '../layouts/Layout.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+
+const lastUpdated = 'June 3, 2026';
+---
+
+<Layout
+  title="Terms of Use"
+  description="W.O.R.D. terms of use — the rules for sending and receiving postcards on wordcards.co."
+>
+  <header class="mb-10">
+    <a href="/" class="text-sm font-medium tracking-widest" style="color:#1A1A1A;" data-dark-color="#F5F0E8">W.O.R.D.</a>
+    <p class="text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-400 mt-1">Written Or Received Daily</p>
+  </header>
+
+  <main>
+    <article class="prose prose-neutral dark:prose-invert max-w-none">
+      <h1>Terms of Use</h1>
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">Last updated: {lastUpdated}</p>
+
+      <p>
+        By using W.O.R.D. (wordcards.co), you agree to these terms. This is a personal project
+        built in good faith — please use it in the same spirit.
+      </p>
+
+      <h2>What W.O.R.D. is for</h2>
+      <p>
+        W.O.R.D. exists for one purpose: to send and receive motivational, encouraging, and uplifting
+        postcards. Every postcard submitted to the public pool should reflect that intent.
+      </p>
+
+      <h2>What is not permitted</h2>
+      <p>You agree not to submit content that is:</p>
+      <ul>
+        <li>Hateful, discriminatory, or harassing toward any person or group</li>
+        <li>Sexually explicit or inappropriate</li>
+        <li>Threatening or intended to cause harm</li>
+        <li>Spam, advertising, or promotional in nature</li>
+        <li>In violation of any applicable law</li>
+      </ul>
+      <p>
+        Postcards that violate these terms will be removed from the public pool. Repeated violations
+        may result in access being restricted.
+      </p>
+
+      <h2>Content ownership</h2>
+      <p>
+        You retain ownership of any message you write. By submitting a postcard to the public pool,
+        you grant W.O.R.D. a non-exclusive, royalty-free license to display that message to other
+        visitors. You may request removal of your content at any time by contacting
+        <a href="mailto:hello@wordcards.co">hello@wordcards.co</a>.
+      </p>
+
+      <h2>Images</h2>
+      <p>
+        All images are sourced from Unsplash under the
+        <a href="https://unsplash.com/license" target="_blank" rel="noopener noreferrer">Unsplash License</a>.
+        Images are not owned by W.O.R.D. and are used in accordance with Unsplash's terms.
+      </p>
+
+      <h2>Disclaimer</h2>
+      <p>
+        W.O.R.D. is provided as-is, without warranties of any kind. This is a personal project
+        operated without commercial intent. Lionel Mosley is not liable for any damages arising
+        from your use of this site.
+      </p>
+
+      <h2>Changes to these terms</h2>
+      <p>
+        These terms may be updated at any time. The date at the top of this page reflects the
+        most recent revision. Continued use of the site constitutes acceptance of the current terms.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about these terms can be directed to
+        <a href="mailto:hello@wordcards.co">hello@wordcards.co</a>.
+      </p>
+    </article>
+  </main>
+
+  <footer class="mt-16 pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-col items-center gap-3">
+    <p class="text-xs text-neutral-400 dark:text-neutral-500 text-center leading-relaxed">
+      Built with ❤️ in Houston, TX<br />
+      by <a
+        href="https://trust-lionel.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tracking-widest text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white underline underline-offset-4 decoration-neutral-300 dark:decoration-neutral-700 transition-colors"
+      >L I O N E L &nbsp; M O S L E Y</a>
+    </p>
+    <SocialLinks />
+  </footer>
+</Layout>

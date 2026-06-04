@@ -1,0 +1,140 @@
+---
+// src/pages/p/[id].astro
+// Dynamic route — renders a single shared postcard.
+// Fetches postcard data from Netlify Blobs by ID.
+// OG image is generated dynamically so social shares show the postcard image.
+
+import Layout from '../../layouts/Layout.astro';
+import SocialLinks from '../../components/SocialLinks.astro';
+import { getStore } from '@netlify/blobs';
+
+const { id } = Astro.params;
+
+let card = null;
+let notFound = false;
+
+try {
+  const store = getStore('postcards');
+  card = await store.get(id as string, { type: 'json' });
+  if (!card) notFound = true;
+} catch {
+  notFound = true;
+}
+
+// Build the OG image URL — uses the postcard's Unsplash image as the social preview
+// In production, swap for a dynamic OG image generator (Netlify Edge Function)
+const ogImage = card?.img
+  ? `${card.img}&w=1200&h=630&fit=crop&crop=entropy`
+  : 'https://wordcards.co/og-image.png';
+
+const title = card
+  ? `A postcard for you — W.O.R.D.`
+  : 'Postcard not found — W.O.R.D.';
+
+const description = card
+  ? card.message.slice(0, 155)
+  : 'This postcard could not be found.';
+---
+
+<Layout title={title} description={description} image={ogImage} noindex={!card}>
+  <header class="mb-10">
+    <a href="/" class="text-sm font-medium tracking-widest text-black dark:text-white">W.O.R.D.</a>
+    <p class="text-xs tracking-widest uppercase text-neutral-400 dark:text-neutral-500 mt-1">Written Or Received Daily</p>
+  </header>
+
+  {notFound ? (
+    <main class="py-16 text-center">
+      <p class="text-sm text-neutral-500 dark:text-neutral-400 mb-4">This postcard could not be found.</p>
+      <a href="/" class="text-sm underline underline-offset-4 text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors">
+        Draw a postcard
+      </a>
+    </main>
+  ) : (
+    <main>
+      <!-- Postcard -->
+      <article class="border border-neutral-200 dark:border-neutral-800 rounded-xl overflow-hidden mb-6">
+        {card.img && (
+          <img
+            src={`${card.img}&w=800&q=80`}
+            alt="Postcard image"
+            class="w-full h-56 object-cover"
+            loading="eager"
+          />
+        )}
+        <div class="px-6 py-5">
+          <div class="flex justify-between items-baseline mb-3">
+            <span class="text-xs uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
+              From — {card.from ?? 'Anonymous'}
+            </span>
+            {card.occasion && (
+              <span class="text-xs text-neutral-400 dark:text-neutral-500">{card.occasion}</span>
+            )}
+          </div>
+          <p class="text-base leading-relaxed text-black dark:text-white font-serif mb-4">
+            {card.message}
+          </p>
+          {card.playing && (
+            <p class="text-xs text-neutral-400 dark:text-neutral-500 flex items-center gap-1">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+              {card.playing}
+            </p>
+          )}
+        </div>
+      </article>
+
+      <!-- Share actions -->
+      <div class="flex flex-col gap-3 mb-10">
+        <button
+          id="copy-btn"
+          class="w-full py-2.5 text-sm border border-neutral-200 dark:border-neutral-800 rounded-lg text-black dark:text-white hover:bg-neutral-50 dark:hover:bg-neutral-900 transition-colors"
+        >
+          Copy link to this postcard
+        </button>
+        <a
+          href="/"
+          class="w-full py-2.5 text-sm text-center bg-black dark:bg-white text-white dark:text-black rounded-lg hover:opacity-80 transition-opacity"
+        >
+          Send your own postcard
+        </a>
+      </div>
+
+      <p id="copy-confirm" class="hidden text-xs text-center text-neutral-500 dark:text-neutral-400 mb-6">
+        Link copied to clipboard.
+      </p>
+    </main>
+  )}
+
+  <footer class="mt-16 pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-col items-center gap-3">
+    <p class="text-xs text-neutral-400 dark:text-neutral-500 text-center leading-relaxed">
+      Built with ❤️ in Houston, TX<br />
+      by <a
+        href="https://trust-lionel.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="tracking-widest text-xs text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white underline underline-offset-4 decoration-neutral-300 dark:decoration-neutral-700 transition-colors"
+      >L I O N E L &nbsp; M O S L E Y</a>
+    </p>
+    <SocialLinks />
+  </footer>
+</Layout>
+
+<script>
+  document.getElementById('copy-btn')?.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      const confirm = document.getElementById('copy-confirm');
+      if (confirm) {
+        confirm.classList.remove('hidden');
+        setTimeout(() => confirm.classList.add('hidden'), 3000);
+      }
+    } catch {
+      // Fallback for browsers that block clipboard API
+      const input = document.createElement('input');
+      input.value = window.location.href;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+    }
+  });
+</script>

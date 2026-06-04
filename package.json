@@ -1,0 +1,27 @@
+{
+  "name": "written-or-received-daily",
+  "version": "1.0.0",
+  "description": "W.O.R.D. — Written Or Received Daily. Send or receive a motivational postcard.",
+  "author": "Lionel Mosley <hello@wordcards.co>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/netlify": "^5.0.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "@netlify/blobs": "^8.0.0",
+    "nanoid": "^5.0.0",
+    "tailwindcss": "^3.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

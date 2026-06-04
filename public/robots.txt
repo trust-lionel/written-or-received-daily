@@ -1,0 +1,12 @@
+# robots.txt — wordcards.co
+# W.O.R.D. — Written Or Received Daily
+
+User-agent: *
+Allow: /
+
+# Block Netlify internals
+Disallow: /.netlify/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://wordcards.co/sitemap.xml
