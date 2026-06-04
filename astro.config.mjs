@@ -9,13 +9,15 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      changefreq: 'daily',
-      priority: 0.7,
-      lastmod: new Date(),
-      filter: (page) =>
-        // Exclude individual private postcard URLs from sitemap
-        // Public pool postcards at /p/ are excluded — too dynamic
-        !page.includes('/p/'),
+      filter: (page) => !page.includes('/p/'),
+      serialize(item) {
+        return {
+          url: item.url,
+          changefreq: 'daily',
+          priority: item.url === 'https://wordcards.co/' ? 1.0 : 0.7,
+          lastmod: new Date().toISOString(),
+        };
+      },
     }),
   ],
   adapter: netlify(),
