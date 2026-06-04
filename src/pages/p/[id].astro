@@ -82,6 +82,11 @@ const description = card
               {card.playing}
             </p>
           )}
+          {card.photographerName && card.unsplashUrl && (
+            <p class="text-xs text-neutral-300 dark:text-neutral-600 mt-2">
+              Photo by <a href={card.photographerUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">{card.photographerName}</a> on <a href={card.unsplashUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-2">Unsplash</a>
+            </p>
+          )}
         </div>
       </article>
 
