@@ -1,6 +1,8 @@
 // src/pages/api/share.ts
 // Netlify serverless function — stores a postcard in Netlify Blobs
 // and returns a unique shareable ID.
+// prerender = false ensures this runs as a Netlify function, not a static file.
+export const prerender = false;
 
 import type { APIRoute } from 'astro';
 import { nanoid } from 'nanoid';
