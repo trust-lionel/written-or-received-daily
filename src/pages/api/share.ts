@@ -13,6 +13,7 @@ import { nanoid } from 'nanoid';
 export const POST: APIRoute = async ({ request }) => {
   try {
     const body = await request.json();
+    // 'from' field contains name and location e.g. 'Sarah — Chicago, IL'
     const { message, from, occasion, collection, playing, img } = body;
 
     // Validate required field
